@@ -1,1 +1,3 @@
-<div class="m-auto text-white">more info coming soon...</div>
+<div class="text-white text-xs sm:text-base m-auto">
+  meiri upplýsingar á næstunni...
+</div>

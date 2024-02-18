@@ -5,7 +5,7 @@
   import Pokemons from "./Pokemons.svelte";
 </script>
 
-<div class="w-full h-screen flex flex-col bg-rose-400">
+<div class="w-full h-screen flex flex-col bg-rose-400 mx-auto px-6">
   <Heading />
   <Countdown />
   <PressStart />
