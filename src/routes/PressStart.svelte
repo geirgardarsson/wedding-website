@@ -1,3 +1,3 @@
-<div class="text-white text-xs sm:text-base m-auto">
+<div class="text-white text-sm text-center sm:text-base m-auto">
   meiri upplýsingar á næstunni...
 </div>

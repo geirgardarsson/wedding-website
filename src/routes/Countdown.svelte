@@ -23,7 +23,7 @@
   });
 </script>
 
-<div class="mx-auto my-8 text-white w-64">
+<div class="mx-auto my-8 text-white w-48">
   <div class="flex justify-between">
     <div class="w-12 text-end">{days}</div>
     <div class="w-32 text-start">dagar</div>

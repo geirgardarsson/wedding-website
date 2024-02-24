@@ -1,4 +1,4 @@
-<div class="mx-auto my-16 flex flex-col text-white">
+<div class="mx-auto my-16 flex flex-col text-center text-white">
   <h1 class="mx-auto mb-8 sm:mb-4 text-xl sm:text-2xl">
     Brúðkaup Geirs og Rögnu
   </h1>
