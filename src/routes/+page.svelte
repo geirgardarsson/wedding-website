@@ -1,13 +1,13 @@
 <script>
-  import Countdown from "./Countdown.svelte";
-  import PressStart from "./PressStart.svelte";
-  import Heading from "./Heading.svelte";
-  import Pokemons from "./Pokemons.svelte";
+  import Landing from "./Landing.svelte";
+  import Location from "./Location.svelte";
+  import Menu from "./Menu.svelte";
+  import Register from "./Register.svelte";
 </script>
 
-<div class="w-full h-screen flex flex-col bg-rose-400 mx-auto px-6">
-  <Heading />
-  <Countdown />
-  <PressStart />
-  <Pokemons />
+<div class="snap-y snap-mandatory h-screen w-screen mx:auto overflow-x-hidden">
+  <Landing />
+  <Location />
+  <Menu />
+  <Register />
 </div>
