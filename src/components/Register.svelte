@@ -6,6 +6,7 @@
   let lastName = "";
 
   function register() {
+    // todo plögga api hér
     console.log(`Velkomin(n) ${firstName} ${lastName}!!`);
   }
 

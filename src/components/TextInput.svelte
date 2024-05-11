@@ -1,8 +1,5 @@
 <script>
-   /**
-   * @type {String}
-   */
-    export let text;
+    export let text = "";
     export let placeholder;
     export let textColor;
     export let borderColor;
