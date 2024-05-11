@@ -9,3 +9,34 @@
 .mini {
   transform: scale(0.5, 0.5);
 }
+
+@layer components {
+  .text-input {
+    @apply my-4 p-4;
+
+    outline: none;
+    margin: 15px;
+    padding: 7px 0 7px 14px;
+    border: 3px solid rgb(150, 150, 150);
+    box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+      inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+    border-radius: 0.3em;
+    color: rgb(50, 50, 50);
+  }
+}
+
+.btn-primary {
+  padding: 5px 15px;
+  margin: 15px;
+  outline: none;
+  border: 3px solid white;
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 2px 0px 2px rgb(100, 100, 100);
+  text-shadow: 0px -1px rgb(90, 90, 90), -1px 0px rgb(90, 90, 90);
+  border-radius: 0.3em;
+  color: white;
+}
+.btn-primary:active {
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+    inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 1px 0px 2px rgb(100, 100, 100);
+}
