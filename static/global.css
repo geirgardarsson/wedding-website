@@ -544,6 +544,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.text-input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  outline: none;
+  margin: 15px;
+  padding: 7px 0 7px 14px;
+  border: 3px solid rgb(150, 150, 150);
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+      inset 0px 0px 0px 1px rgb(90, 90, 90), 1px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+  color: rgb(50, 50, 50);
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  outline: none;
+  border: 3px solid white;
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+      inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 2px 0px 2px rgb(100, 100, 100);
+  text-shadow: 0px -1px rgb(90, 90, 90), -1px 0px rgb(90, 90, 90);
+  border-radius: 0.3em;
+  color: white;
+}
+
+.btn-primary:active {
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+      inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 1px 0px 2px rgb(100, 100, 100);
+}
+
 .m-auto {
   margin: auto;
 }
@@ -561,6 +595,10 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-4 {
@@ -654,9 +692,19 @@ video {
   overflow-x: hidden;
 }
 
+.border-violet-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity));
+}
+
 .bg-cyan-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 211 238 / var(--tw-bg-opacity));
+}
+
+.bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
 .bg-green-400 {
@@ -672,11 +720,6 @@ video {
 .bg-violet-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(167 139 250 / var(--tw-bg-opacity));
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pt-1 {
@@ -723,6 +766,11 @@ video {
   line-height: 1rem;
 }
 
+.text-violet-500 {
+  --tw-text-opacity: 1;
+  color: rgb(139 92 246 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -734,6 +782,16 @@ video {
 
 .mini {
   transform: scale(0.5, 0.5);
+}
+
+.placeholder\:text-violet-300::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(196 181 253 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-violet-300::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(196 181 253 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -770,5 +828,11 @@ video {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-96 {
+    width: 24rem;
   }
 }
