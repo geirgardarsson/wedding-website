@@ -39,4 +39,16 @@
     box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
       inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 1px 0px 2px rgb(100, 100, 100);
   }
+
+  .screen-section {
+    @apply w-screen h-screen snap-start shrink-0 flex;
+  }
+
+  .retro-item {
+    @apply w-20 h-20 bg-white;
+
+    border: 3px solid rgb(70, 70, 70);
+    box-shadow: 3px 3px 0px 3px rgb(100, 100, 100);
+    border-radius: 0.5em;
+  }
 }

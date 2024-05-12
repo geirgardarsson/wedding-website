@@ -23,7 +23,7 @@
   }
 </script>
 
-<div id="rsvp-section" class="w-screen h-screen snap-start shrink-0 bg-violet-400 flex">
+<div id="rsvp-section" class="screen-section bg-violet-400">
   <div class="h-screen w-full md:w-96 m-auto flex flex-col">
     <div class="m-auto mb-0 flex flex-col">
       <TextInput

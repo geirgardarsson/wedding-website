@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="w-screen h-screen snap-start shrink-0 flex flex-col bg-rose-400 mx-auto"
+  class="screen-section flex-col bg-rose-400 mx-auto"
 >
   <Heading />
   <Countdown />
