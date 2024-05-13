@@ -11,10 +11,7 @@
   <div class="flex flex-col mt-4">
     <div class="text-center text-white text-sm w-64 mx-auto my-4">
       <div>
-        <div class="mb-4">Í aðalrétt verður:</div>
-        <div>Kjúklingur</div>
-        <div>Lamb</div>
-        <div>Chana Masala</div>
+        <div>Aðalréttur:</div>
       </div>
     </div>
     <div class="m-auto">
@@ -26,10 +23,7 @@
   <div class="flex flex-col mt-8">
     <div class="text-center text-white text-sm w-64 mx-auto my-4">
       <div>
-        <div class="mb-4">Og fyrir þau sem vilja grænmetis:</div>
-        <div>Aloo Baigan</div>
-        <div>Dahl</div>
-        <div>Chana Masala</div>
+        <div>Og fyrir þau sem vilja grænmetis:</div>
       </div>
     </div>
     <div class="m-auto">

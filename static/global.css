@@ -736,6 +736,15 @@ video {
   height: 2.5rem;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -800,6 +809,11 @@ video {
   width: 15rem;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .scale-50 {
   --tw-scale-x: .5;
   --tw-scale-y: .5;
@@ -817,6 +831,10 @@ video {
 
 .snap-mandatory {
   --tw-scroll-snap-strictness: mandatory;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -1078,6 +1096,14 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:h-96 {
+    height: 24rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
