@@ -1,5 +1,6 @@
 <script>
   import Button from "./Button.svelte";
+  import Section from "./Section.svelte";
 
   function scrollToMenu() {
     const menu = document.getElementById("menu-section");
@@ -12,7 +13,7 @@
   }
 </script>
 
-<div class="screen-section bg-emerald-400">
+<Section backgroundColor="bg-emerald-400">
   <div class="h-screen w-full lg:w-2/3 p-8 m-auto flex flex-col">
     <div class="m-auto mt-0">
       <h1 class="text-white text-center mb-6">Bæði veislan og athöfnin verða haldin í Rafveituheimilinu í Elliðaárdal</h1>
@@ -35,4 +36,4 @@
         bgColor="bg-violet-500" />
     </div>
   </div>
-</div>
+</Section>

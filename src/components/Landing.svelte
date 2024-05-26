@@ -3,13 +3,14 @@
   import PressStart from "./PressStart.svelte";
   import Heading from "./Heading.svelte";
   import Pokemons from "./Pokemons.svelte";
+  import Section from "./Section.svelte";
 </script>
 
-<div
-  class="screen-section flex-col bg-rose-400 mx-auto"
->
+<Section
+  additionalClasses="flex-col mx-auto"
+  backgroundColor="bg-rose-400">
   <Heading />
   <Countdown />
   <PressStart />
   <Pokemons />
-</div>
+</Section>

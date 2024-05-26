@@ -41,7 +41,7 @@
   }
 
   .screen-section {
-    @apply w-screen h-screen snap-start shrink-0 flex;
+    @apply w-screen snap-start shrink-0 flex;
   }
 
   .retro-item {
