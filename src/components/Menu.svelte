@@ -7,7 +7,7 @@
 <Section
   sectionId="menu-section"
   backgroundColor="bg-cyan-400"
-  additionalClasses="flex-col">
+  additionalClasses="flex-col h-screen">
   <div class="flex flex-col mx-auto my-6">
     <img class="w-24 h-24 m-auto" alt="austurindiafjelagid" src={austurIndia} />
     <h1 class="m-auto mt-6 px-8 w-full md:w-1/2 text-white text-center m-auto">Við munum bjóða upp á girnilegt hlaðborð frá Austur-Indía Fjélaginu</h1>
