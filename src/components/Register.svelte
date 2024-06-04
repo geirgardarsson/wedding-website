@@ -1,6 +1,7 @@
 <script>
   import Button from "./Button.svelte";
   import TextInput from "./TextInput.svelte";
+  import Section from "./Section.svelte";
 
   let firstName = "";
   let lastName = "";
@@ -40,7 +41,9 @@
   }
 </script>
 
-<div id="rsvp-section" class="screen-section bg-violet-400">
+<Section 
+  sectionId="rsvp-section" 
+  backgroundColor="bg-violet-400">
   <div class="h-screen w-full md:w-96 m-auto flex flex-col">
     <div class="m-auto mb-0 flex flex-col">
       <TextInput
@@ -62,4 +65,4 @@
         <Button on:click={register} text="Ég ætla að mæta!!" bgColor="bg-emerald-500" />
     </div>
   </div>
-</div>
+</Section>

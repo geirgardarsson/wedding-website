@@ -1,9 +1,13 @@
 <script>
   import austurIndia from '$lib/austurindia.png'
   import MenuItem from './MenuItem.svelte';
+  import Section from './Section.svelte';
 </script>
 
-<div id="menu-section" class="screen-section bg-cyan-400 flex-col">
+<Section
+  sectionId="menu-section"
+  backgroundColor="bg-cyan-400"
+  additionalClasses="flex-col h-screen">
   <div class="flex flex-col mx-auto my-6">
     <img class="w-24 h-24 m-auto" alt="austurindiafjelagid" src={austurIndia} />
     <h1 class="m-auto mt-6 px-8 w-full md:w-1/2 text-white text-center m-auto">Við munum bjóða upp á girnilegt hlaðborð frá Austur-Indía Fjélaginu</h1>
@@ -32,4 +36,4 @@
       <MenuItem icon="fa-bowl-food" color="text-emerald-600" />
     </div>
   </div> 
-</div>
+</Section>

@@ -1,4 +1,6 @@
 <script>
+  import Dessert from "../components/Dessert.svelte";
+  import GiftList from "../components/GiftList.svelte";
   import Landing from "../components/Landing.svelte";
   import Location from "../components/Location.svelte";
   import Menu from "../components/Menu.svelte";
@@ -10,5 +12,6 @@
   <Register />
   <Location />
   <Menu />
-  <!-- <Dessert /> -->
+  <Dessert />
+  <!-- <GiftList /> -->
 </div>
