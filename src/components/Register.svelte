@@ -5,9 +5,26 @@
   let firstName = "";
   let lastName = "";
 
-  function register() {
+  async function register() {
     // todo plögga api hér
     console.log(`Velkomin(n) ${firstName} ${lastName}!!`);
+    const res = await fetch('https://wedding-api-hxzp.onrender.com/api/guest', {
+			method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+			body: JSON.stringify({
+				firstName: firstName,
+				lastName: lastName,
+        diet: "vegan",
+        going: true
+			})
+		})
+		
+		const json = await res.json()
+    //console.log(json)
+		let result = JSON.stringify(json)
+    console.log(result)
   }
 
   /**
@@ -42,7 +59,7 @@
           on:keyup={handleKeyup} />
     </div>
     <div class="m-auto">
-      <Button on:click={register} text="Ég ætla að mæta!!" bgColor="bg-emerald-500" />
+        <Button on:click={register} text="Ég ætla að mæta!!" bgColor="bg-emerald-500" />
     </div>
   </div>
 </div>
