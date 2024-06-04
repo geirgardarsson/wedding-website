@@ -25,6 +25,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-vercel": "^5.1.0",
+		"svelte-persisted-store": "^0.11.0",
 		"terminal.css": "^0.7.5"
 	}
 }

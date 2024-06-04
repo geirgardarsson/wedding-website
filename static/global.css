@@ -603,6 +603,11 @@ video {
   margin: auto;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -628,19 +633,24 @@ video {
   margin-bottom: 2rem;
 }
 
-.my-px {
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.my-px {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .mb-0 {
@@ -707,6 +717,10 @@ video {
   display: contents;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -715,28 +729,12 @@ video {
   height: 6rem;
 }
 
-.h-64 {
-  height: 16rem;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .h-full {
   height: 100%;
 }
 
-.h-5\/6 {
-  height: 83.333333%;
-}
-
-.h-2\/3 {
-  height: 66.666667%;
-}
-
-.h-1\/2 {
-  height: 50%;
+.h-screen {
+  height: 100vh;
 }
 
 .w-10 {
@@ -822,12 +820,12 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border-2 {
@@ -893,10 +891,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(https\:\/\/www\.baunin\.com\/cdn\/shop\/files\/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x\.jpeg\?v\=1613696279\)\] {
-  background-image: url(https://www.baunin.com/cdn/shop/files/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x.jpeg?v=1613696279);
-}
-
 .bg-\[url\(\'https\:\/\/www\.baunin\.com\/cdn\/shop\/files\/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x\.jpeg\?v\=1613696279\'\)\] {
   background-image: url('https://www.baunin.com/cdn/shop/files/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x.jpeg?v=1613696279');
 }
@@ -905,21 +899,12 @@ video {
   background-size: cover;
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .px-8 {
@@ -971,6 +956,16 @@ video {
   line-height: 1rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-emerald-600 {
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
@@ -989,14 +984,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-25 {
-  opacity: 0.25;
 }
 
 .opacity-75 {
@@ -1064,10 +1051,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:h-96 {
-    height: 24rem;
-  }
-
   .md\:h-2\/3 {
     height: 66.666667%;
   }
