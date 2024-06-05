@@ -1,13 +1,15 @@
 <script>
-    export let text = "";
-    export let placeholder;
-    export let textColor;
-    export let borderColor;
-    export let placeholderColor;
+  export let text = "";
+  export let placeholder;
+  export let textColor;
+  export let borderColor;
+  export let placeholderColor;
+  export let additionalClasses = "";
 </script>
 
 <input
-    bind:value={text}
-    on:keyup
-    class="text-input {textColor} {borderColor} {placeholderColor}"
-    placeholder={placeholder} />
+  bind:value={text}
+  on:keyup
+  class="text-input {textColor} {borderColor} {placeholderColor} {additionalClasses}"
+  {placeholder}
+/>

@@ -578,6 +578,17 @@ video {
       inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 1px 0px 2px rgb(100, 100, 100);
 }
 
+.btn-secondary {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border: 2px solid white;
+  box-shadow: 0px 0px 0px 1px rgb(90, 90, 90),
+      inset 0px 0px 0px 1px rgb(90, 90, 90), 0px 2px 0px 2px rgb(100, 100, 100);
+  border-radius: 0.3em;
+}
+
 .screen-section {
   display: flex;
   width: 100vw;
@@ -606,6 +617,11 @@ video {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .mx-auto {
@@ -643,14 +659,19 @@ video {
   margin-bottom: 1px;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.\!my-0 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .mb-0 {
@@ -715,6 +736,10 @@ video {
 
 .contents {
   display: contents;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-1\/2 {
@@ -846,6 +871,16 @@ video {
   border-color: rgb(139 92 246 / var(--tw-border-opacity));
 }
 
+.border-sky-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 242 254 / var(--tw-border-opacity));
+}
+
+.border-sky-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 132 199 / var(--tw-border-opacity));
+}
+
 .bg-amber-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
@@ -861,6 +896,11 @@ video {
   background-color: rgb(34 211 238 / var(--tw-bg-opacity));
 }
 
+.bg-emerald-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+}
+
 .bg-emerald-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(52 211 153 / var(--tw-bg-opacity));
@@ -869,6 +909,16 @@ video {
 .bg-emerald-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+
+.bg-orange-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
+
+.bg-pink-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
 }
 
 .bg-rose-400 {
@@ -891,6 +941,26 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-sky-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+
+.bg-pink-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+}
+
+.bg-emerald-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(110 231 183 / var(--tw-bg-opacity));
+}
+
+.bg-sky-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'https\:\/\/www\.baunin\.com\/cdn\/shop\/files\/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x\.jpeg\?v\=1613696279\'\)\] {
   background-image: url('https://www.baunin.com/cdn/shop/files/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x.jpeg?v=1613696279');
 }
@@ -910,6 +980,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .pt-1 {
@@ -956,16 +1031,6 @@ video {
   line-height: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-emerald-600 {
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
@@ -984,6 +1049,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-sky-600 {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
 .opacity-75 {
@@ -1011,6 +1081,16 @@ video {
 .placeholder\:text-violet-300::placeholder {
   --tw-text-opacity: 1;
   color: rgb(196 181 253 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .peer-checked\:bg-emerald-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 211 153 / var(--tw-bg-opacity));
+}
+
+.peer:checked ~ .peer-checked\:bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
