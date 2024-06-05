@@ -38,6 +38,12 @@
       }),
     });
 
+    if (!res.ok) {
+      // isLoading = false;
+      console.error(res);
+      return;
+    }
+
     const result = await res.json();
 
     guestStore.set({

@@ -561,7 +561,10 @@ video {
 .btn-primary {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
   padding: 1rem;
+  text-align: center;
   font-size: 1.125rem;
   line-height: 1.75rem;
   outline: none;
@@ -634,6 +637,11 @@ video {
   margin-right: auto;
 }
 
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -662,11 +670,6 @@ video {
 .my-px {
   margin-top: 1px;
   margin-bottom: 1px;
-}
-
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .mb-0 {
