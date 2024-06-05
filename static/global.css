@@ -614,6 +614,11 @@ video {
   margin: auto;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -659,19 +664,9 @@ video {
   margin-bottom: 1px;
 }
 
-.\!my-0 {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
 .my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .mb-0 {
@@ -866,11 +861,6 @@ video {
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
-.border-violet-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(139 92 246 / var(--tw-border-opacity));
-}
-
 .border-sky-100 {
   --tw-border-opacity: 1;
   border-color: rgb(224 242 254 / var(--tw-border-opacity));
@@ -879,6 +869,11 @@ video {
 .border-sky-600 {
   --tw-border-opacity: 1;
   border-color: rgb(2 132 199 / var(--tw-border-opacity));
+}
+
+.border-violet-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity));
 }
 
 .bg-amber-500 {
@@ -911,19 +906,19 @@ video {
   background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
-.bg-orange-300 {
+.bg-pink-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
-}
-
-.bg-pink-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
 }
 
 .bg-rose-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 113 133 / var(--tw-bg-opacity));
+}
+
+.bg-sky-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
 }
 
 .bg-violet-400 {
@@ -939,26 +934,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-sky-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
-}
-
-.bg-pink-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
-}
-
-.bg-emerald-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(110 231 183 / var(--tw-bg-opacity));
-}
-
-.bg-sky-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'https\:\/\/www\.baunin\.com\/cdn\/shop\/files\/5245D1D6-4CD3-4160-9EBB-92BDF2DC3B84_1512x\.jpeg\?v\=1613696279\'\)\] {
@@ -980,11 +955,6 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .pt-1 {
@@ -1041,6 +1011,11 @@ video {
   color: rgb(219 39 119 / var(--tw-text-opacity));
 }
 
+.text-sky-600 {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
 .text-violet-500 {
   --tw-text-opacity: 1;
   color: rgb(139 92 246 / var(--tw-text-opacity));
@@ -1049,11 +1024,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-sky-600 {
-  --tw-text-opacity: 1;
-  color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
 .opacity-75 {
@@ -1073,6 +1043,24 @@ video {
   transform: scale(0.5, 0.5);
 }
 
+/* HTML: <div class="loader"></div> */
+
+.loader {
+  width: 120px;
+  height: 20px;
+  border-radius: 20px;
+  background: repeating-linear-gradient(135deg, #f03355 0 10px, #ffa516 0 20px)
+      0/0% no-repeat,
+    repeating-linear-gradient(135deg, #ddd 0 10px, #eee 0 20px) 0/100%;
+  animation: l3 2s infinite;
+}
+
+@keyframes l3 {
+  100% {
+    background-size: 100%;
+  }
+}
+
 .placeholder\:text-violet-300::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(196 181 253 / var(--tw-text-opacity));
@@ -1086,11 +1074,6 @@ video {
 .peer:checked ~ .peer-checked\:bg-emerald-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(52 211 153 / var(--tw-bg-opacity));
-}
-
-.peer:checked ~ .peer-checked\:bg-emerald-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {

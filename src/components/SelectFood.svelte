@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
+  import { onMount } from "svelte";
   import Button from "./Button.svelte";
   import Section from "./Section.svelte";
   import TextInput from "./TextInput.svelte";
+  import { get } from "svelte/store";
+  import { guestStore } from "../stores";
 
   let options = [
     {
@@ -22,6 +25,9 @@
     },
   ];
 
+  let selectedOption = "";
+  let otherSelected = false;
+
   function scrollToLocation() {
     const foodSection = document.getElementById("location");
 
@@ -31,6 +37,19 @@
 
     foodSection.scrollIntoView({ behavior: "smooth" });
   }
+
+  function handleChange(value: string) {
+    selectedOption = value;
+    otherSelected = value === "other";
+  }
+
+  onMount(() => {
+    var { guest } = get(guestStore);
+
+    if (guest?.diet) {
+      handleChange(guest.diet);
+    }
+  });
 </script>
 
 <Section sectionId="food-section" backgroundColor="bg-sky-400">
@@ -49,6 +68,8 @@
             id={option.value}
             name="food"
             value={option.value}
+            checked={selectedOption === option.value}
+            on:change={() => handleChange(option.value)}
           />
           <label
             class="btn-secondary bg-emerald-200 peer-checked:bg-emerald-400"
@@ -56,16 +77,18 @@
           >
         </div>
       {/each}
-    </div>
-    <div>
-      <TextInput
-        text=""
-        borderColor="border-sky-600"
-        textColor="text-sky-600"
-        placeholder="annað"
-        placeholderColor="border-sky-100"
-        additionalClasses="mx-0 w-full"
-      />
+      {#if otherSelected}
+        <div class="my-0">
+          <TextInput
+            text=""
+            borderColor="border-sky-600"
+            textColor="text-sky-600"
+            placeholder="annað"
+            placeholderColor="border-sky-100"
+            additionalClasses="mx-0 w-full"
+          />
+        </div>
+      {/if}
     </div>
     <div>
       <Button
