@@ -5,6 +5,7 @@
   import Location from "../components/Location.svelte";
   import Menu from "../components/Menu.svelte";
   import Register from "../components/Register.svelte";
+  import RegisterSpouse from "../components/RegisterSpouse.svelte";
   import SelectFood from "../components/SelectFood.svelte";
 </script>
 
@@ -12,6 +13,7 @@
   <Landing />
   <Register />
   <SelectFood />
+  <RegisterSpouse />
   <Location />
   <Menu />
   <Dessert />

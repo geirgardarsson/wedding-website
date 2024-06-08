@@ -3,7 +3,7 @@
   import TextInput from "./TextInput.svelte";
   import Section from "./Section.svelte";
   import { onMount } from "svelte";
-  import { guestStore } from "../stores";
+  import { guestStore, spouseStore } from "../stores";
   import { get } from "svelte/store";
 
   let firstName = "";
@@ -44,6 +44,11 @@
       guest: {
         ...result,
       },
+    });
+
+    spouseStore.set({
+      spouse: null,
+      guestId: result.id
     });
 
     setGuestData(result);

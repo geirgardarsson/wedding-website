@@ -38,6 +38,16 @@
     foodSection.scrollIntoView({ behavior: "smooth" });
   }
 
+  function scrollToSpouse() {
+    const spouseSection = document.getElementById("spouse-rsvp-section");
+
+    if (!spouseSection) {
+      return;
+    }
+
+    spouseSection.scrollIntoView({ behavior: "smooth" });
+  }
+
   function handleChange(value: string) {
     selectedOption = value;
     otherSelected = value === "other";
@@ -90,11 +100,17 @@
         </div>
       {/if}
     </div>
-    <div>
+    <div class="text-xs flex">
       <Button
+        extraStyles="mr-2"
         text="Hvert á ég að mæta?"
         bgColor="bg-pink-400"
         on:click={scrollToLocation}
+      />
+      <Button
+        text="Skrá maka"
+        bgColor="bg-pink-400"
+        on:click={scrollToSpouse}
       />
     </div>
   </div>
