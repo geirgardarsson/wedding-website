@@ -10,6 +10,7 @@
 <input
   bind:value={text}
   on:keyup
+  on:blur
   class="text-input {textColor} {borderColor} {placeholderColor} {additionalClasses}"
   {placeholder}
 />

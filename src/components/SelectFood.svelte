@@ -27,6 +27,8 @@
 
   let selectedOption = "";
   let otherSelected = false;
+  let otherDiet = "";
+  let isLoading = false;
 
   function scrollToLocation() {
     const foodSection = document.getElementById("location");
@@ -48,16 +50,88 @@
     spouseSection.scrollIntoView({ behavior: "smooth" });
   }
 
-  function handleChange(value: string) {
+  function scrollToSpouse() {
+    const spouseSection = document.getElementById("spouse-rsvp-section");
+
+    if (!spouseSection) {
+      return;
+    }
+
+    spouseSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function handleRadioChange(value: string) {
+    let isOther =
+      value !== "normal" && value !== "vegan" && value !== "vegetarian";
+
+    if (isOther) {
+      selectedOption = "other";
+      otherSelected = true;
+      otherDiet = value === "other" ? "" : value;
+      return;
+    }
     selectedOption = value;
     otherSelected = value === "other";
+
+    // will call the updateFood function when the user types in the text input
+    if (otherSelected) {
+      return;
+    }
+
+    var { guest } = get(guestStore);
+
+    if (guest) {
+      updateFood(guest, value);
+    }
+  }
+
+  function handleOtherChange(value: string) {
+    var { guest } = get(guestStore);
+
+    if (guest) {
+      updateFood(guest, value);
+    }
+  }
+
+  async function updateFood(guest: StoredGuest, value: string) {
+    if (guest.diet === value) {
+      return;
+    }
+
+    isLoading = true;
+
+    const res = await fetch(
+      `https://wedding-api-hxzp.onrender.com/api/guest/${guest.id}?food=${value}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!res.ok) {
+      isLoading = false;
+      console.error(res);
+      return;
+    }
+
+    const result = await res.json();
+
+    guestStore.set({
+      guest: {
+        ...result,
+      },
+    });
+
+    isLoading = false;
   }
 
   onMount(() => {
     var { guest } = get(guestStore);
 
     if (guest?.diet) {
-      handleChange(guest.diet);
+      handleRadioChange(guest.diet);
     }
   });
 </script>
@@ -79,7 +153,7 @@
             name="food"
             value={option.value}
             checked={selectedOption === option.value}
-            on:change={() => handleChange(option.value)}
+            on:change={() => handleRadioChange(option.value)}
           />
           <label
             class="btn-secondary bg-emerald-200 peer-checked:bg-emerald-400"
@@ -90,12 +164,13 @@
       {#if otherSelected}
         <div class="my-0">
           <TextInput
-            text=""
+            text={otherDiet}
             borderColor="border-sky-600"
             textColor="text-sky-600"
             placeholder="annað"
             placeholderColor="border-sky-100"
             additionalClasses="mx-0 w-full"
+            on:blur={(e) => handleOtherChange(e.target?.value)}
           />
         </div>
       {/if}
@@ -105,6 +180,7 @@
         extraStyles="mr-2"
         text="Hvert á ég að mæta?"
         bgColor="bg-pink-400"
+        {isLoading}
         on:click={scrollToLocation}
       />
       <Button

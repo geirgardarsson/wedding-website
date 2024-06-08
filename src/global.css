@@ -25,7 +25,7 @@
   }
 
   .btn-primary {
-    @apply my-4 p-4 text-lg;
+    @apply my-4 p-4 text-lg flex w-full text-center;
 
     outline: none;
     border: 3px solid white;
