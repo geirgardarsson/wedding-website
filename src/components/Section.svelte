@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import SectionPadding from "./SectionPadding.svelte";
 
   export let sectionId = "";
   export let backgroundColor = "";
@@ -25,6 +26,7 @@
   });
 </script>
 
+<SectionPadding {backgroundColor} />
 <div
   id={sectionId}
   class="screen-section {backgroundColor} {additionalClasses}"
@@ -32,3 +34,4 @@
 >
   <slot />
 </div>
+<SectionPadding {backgroundColor} />

@@ -75,6 +75,10 @@
   }
 
   async function updateFood(guest: StoredGuest, value: string) {
+    if (guest.diet === value) {
+      return;
+    }
+
     isLoading = true;
 
     const res = await fetch(
