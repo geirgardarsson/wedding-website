@@ -43,7 +43,6 @@
   }
 
   function handleRadioSpouseChange(value: string) {
-    console.log("hallo", value);
     let isOther =
       value !== "normal" && value !== "vegan" && value !== "vegetarian";
 
@@ -69,7 +68,6 @@
   }
 
   function handleOtherSpouseChange(value: string) {
-    console.log("hæ2", value);
     var { spouse } = get(spouseStore);
 
     if (spouse) {
@@ -78,7 +76,6 @@
   }
 
   async function updateFood(spouse: StoredGuest, value: string) {
-    console.log("hæ", value, spouse);
     if (spouse.diet === value) {
       return;
     }
@@ -94,8 +91,6 @@
         },
       }
     );
-
-    console.log(res);
 
     if (!res.ok) {
       isLoading = false;
@@ -132,12 +127,12 @@
 
 <Section sectionId="spouse-food-section" backgroundColor="bg-sky-400">
   <div class="flex flex-col justify-around mx-6">
-    <div class="nes-container is-rounded bg-white">
+    <div class="nes-container is-rounded bg-white !my-12 !mt-16">
       <h2 class="text-center text-sm">
         {`Láttu okkur vita ef ${spouseName ?? "maki"} er með einhverjar séróskir um mat`}
       </h2>
     </div>
-    <div>
+    <div class="my-4">
       {#each spouseOptions as spouseOption}
         <div class="text-sm">
           <input
@@ -169,7 +164,7 @@
         </div>
       {/if}
     </div>
-    <div class="text-xs flex">
+    <div class="text-xs flex mt-12 mb-0">
       <Button
         extraStyles="mr-2"
         text="Hvert á ég að mæta?"

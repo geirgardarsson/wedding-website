@@ -30,7 +30,6 @@
 <div
   id={sectionId}
   class="screen-section {backgroundColor} {additionalClasses}"
-  style={heightStyle ?? "height: 100vh"}
 >
   <slot />
 </div>

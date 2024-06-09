@@ -117,13 +117,14 @@
         Takk fyrir að mæta {firstName}!!
       </h1>
     {:else}
-      <div class="m-auto mb-0 flex flex-col">
+      <div class="m-auto flex flex-col">
         <TextInput
           bind:text={firstName}
           placeholder="Fornafn maka"
           textColor="text-violet-500"
           borderColor="border-violet-500"
           placeholderColor="placeholder:text-violet-300"
+          additionalClasses="my-6"
           on:keyup={handleKeyup}
         />
         <TextInput
@@ -132,17 +133,19 @@
           textColor="text-violet-500"
           borderColor="border-violet-500"
           placeholderColor="placeholder:text-violet-300"
+          additionalClasses="my-6"
           on:keyup={handleKeyup}
         />
       </div>
     {/if}
-    <div class="m-auto mx-6">
+    <div class="m-auto mx-6 mb-12">
       <Button
         on:click={isRegistered ? scrollToFood : register}
         text={isRegistered
           ? `${firstName} hlakkar til að mæta!!`
           : "Maki ætlar að mæta!!"}
         bgColor="bg-pink-500"
+        {isLoading}
       />
     </div>
     {#if error}

@@ -128,12 +128,12 @@
 
 <Section sectionId="food-section" backgroundColor="bg-sky-400">
   <div class="flex flex-col justify-around mx-6">
-    <div class="nes-container is-rounded bg-white">
+    <div class="nes-container is-rounded bg-white !my-12">
       <h2 class="text-center text-sm">
         Láttu okkur vita ef þú ert með einhverjar séróskir um mat
       </h2>
     </div>
-    <div>
+    <div class="my-2">
       {#each options as option}
         <div class="text-sm">
           <input
@@ -165,16 +165,17 @@
         </div>
       {/if}
     </div>
-    <div class="text-xs flex">
+    <div class="flex flex-col mt-12 mb-0">
       <Button
-        extraStyles="mr-2"
+        extraStyles="text-sm my-2"
         text="Hvert á ég að mæta?"
         bgColor="bg-pink-400"
         {isLoading}
         on:click={scrollToLocation}
       />
       <Button
-        text="Skrá maka"
+        extraStyles="text-sm my-2"
+        text="Ég vil skrá maka"
         bgColor="bg-pink-400"
         {isLoading}
         on:click={scrollToSpouse}

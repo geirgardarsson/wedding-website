@@ -2,4 +2,4 @@
   export let backgroundColor;
 </script>
 
-<div class={`h-16 ${backgroundColor}`}></div>
+<div class={`h-32 ${backgroundColor}`}></div>
