@@ -5,6 +5,7 @@
   export let sectionId = "";
   export let backgroundColor = "";
   export let additionalClasses = "";
+  export let extraPadding = false;
 
   /**
    * @type {string}
@@ -30,7 +31,11 @@
 <div
   id={sectionId}
   class="screen-section {backgroundColor} {additionalClasses}"
+  style={"height: 100vh"}
 >
   <slot />
 </div>
 <SectionPadding {backgroundColor} />
+{#if extraPadding}
+  <SectionPadding {backgroundColor} />
+{/if}

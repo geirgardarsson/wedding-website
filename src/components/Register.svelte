@@ -95,14 +95,13 @@
         Takk fyrir að mæta {firstName}!!
       </h1>
     {:else}
-      <div class="m-auto flex flex-col">
+      <div class="m-auto flex flex-col min-h-96 m-auto justify-center">
         <TextInput
           bind:text={firstName}
           placeholder="Fornafn"
           textColor="text-violet-500"
           borderColor="border-violet-500"
           placeholderColor="placeholder:text-violet-300"
-          additionalClasses="my-6"
           on:keyup={handleKeyup}
         />
         <TextInput
@@ -111,7 +110,6 @@
           textColor="text-violet-500"
           borderColor="border-violet-500"
           placeholderColor="placeholder:text-violet-300"
-          additionalClasses="my-6"
           on:keyup={handleKeyup}
         />
       </div>

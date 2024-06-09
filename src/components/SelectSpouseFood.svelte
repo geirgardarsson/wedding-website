@@ -126,13 +126,13 @@
 </script>
 
 <Section sectionId="spouse-food-section" backgroundColor="bg-sky-400">
-  <div class="flex flex-col justify-around mx-6">
-    <div class="nes-container is-rounded bg-white !my-12 !mt-16">
+  <div class="flex flex-col justify-around mx-6 h-full">
+    <div class="nes-container is-rounded bg-white">
       <h2 class="text-center text-sm">
         {`Láttu okkur vita ef ${spouseName ?? "maki"} er með einhverjar séróskir um mat`}
       </h2>
     </div>
-    <div class="my-4">
+    <div>
       {#each spouseOptions as spouseOption}
         <div class="text-sm">
           <input
@@ -164,7 +164,7 @@
         </div>
       {/if}
     </div>
-    <div class="text-xs flex mt-12 mb-0">
+    <div class="text-xs flex">
       <Button
         extraStyles="mr-2"
         text="Hvert á ég að mæta?"

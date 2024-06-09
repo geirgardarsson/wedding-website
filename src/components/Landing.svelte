@@ -8,7 +8,9 @@
 
 <Section
   additionalClasses="flex-col mx-auto"
-  backgroundColor="bg-rose-400">
+  backgroundColor="bg-rose-400"
+  extraPadding={true}
+>
   <Heading />
   <Countdown />
   <PressStart />
