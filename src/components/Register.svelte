@@ -92,7 +92,7 @@
   <div class="h-screen w-full md:w-96 m-auto flex flex-col">
     {#if isRegistered}
       <h1 class="text-center text-xl text-white m-auto">
-        Takk fyrir að mæta {firstName}!!
+        Hlökkum til að sjá þig {firstName}!!
       </h1>
     {:else}
       <div class="m-auto flex flex-col m-auto justify-center">
@@ -114,7 +114,7 @@
         />
       </div>
     {/if}
-    <div class="m-auto">
+    <div class="my-auto mx-6">
       <Button
         on:click={isRegistered ? scrollToFood : register}
         text={isRegistered ? "Hlakka til að mæta!!" : "Ég ætla að mæta!!"}

@@ -23,22 +23,25 @@
   });
 </script>
 
-<div class="mx-auto my-8 text-white w-48">
-  <div class="flex justify-between">
-    <div class="w-12 text-end">{days}</div>
-    <div class="w-32 text-start">dagar</div>
+<div
+  class="row-start-4 row-span-2 grid-cols-span-3 text-white w-60 bg-amber-500 border-primary flex"
+>
+  <div class="m-auto w-full p-2">
+    <div class="flex justify-between">
+      <div class="w-12 text-end">{days}</div>
+      <div class="w-32 text-start">dagar</div>
+    </div>
+    <div class="flex justify-between">
+      <div class="w-12 text-end">{hours}</div>
+      <div class="w-32 text-start">tímar</div>
+    </div>
+    <div class="flex justify-between">
+      <div class="w-12 text-end">{minutes}</div>
+      <div class="w-32 text-start">mínútur</div>
+    </div>
+    <div class="flex justify-between">
+      <div class="w-12 text-end">{seconds}</div>
+      <div class="w-32 text-start">sekúndur</div>
+    </div>
   </div>
-  <div class="flex justify-between">
-    <div class="w-12 text-end">{hours}</div>
-    <div class="w-32 text-start">tímar</div>
-  </div>
-  <div class="flex justify-between">
-    <div class="w-12 text-end">{minutes}</div>
-    <div class="w-32 text-start">mínútur</div>
-  </div>
-  <div class="flex justify-between">
-    <div class="w-12 text-end">{seconds}</div>
-    <div class="w-32 text-start">sekúndur</div>
-  </div>
-  <div class="pt-4 text-end">í veisluna</div>
 </div>

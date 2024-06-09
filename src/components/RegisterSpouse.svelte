@@ -139,9 +139,7 @@
     <div class="m-auto mx-4">
       <Button
         on:click={isRegistered ? scrollToFood : register}
-        text={isRegistered
-          ? `${firstName} hlakkar til að mæta!!`
-          : "Maki ætlar að mæta!!"}
+        text={`${firstName !== "" ? firstName : "maki"} ætlar að mæta!!`}
         bgColor="bg-pink-500"
         {isLoading}
       />

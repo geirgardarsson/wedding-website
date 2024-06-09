@@ -129,7 +129,7 @@
   <div class="flex flex-col justify-around mx-6 h-full">
     <div class="nes-container is-rounded bg-white">
       <h2 class="text-center text-sm">
-        {`Láttu okkur vita ef ${spouseName ?? "maki"} er með einhverjar séróskir um mat`}
+        Er hann/hún með einhverjar séróskir um mat?
       </h2>
     </div>
     <div>
@@ -167,7 +167,7 @@
     <div class="text-xs flex">
       <Button
         extraStyles="mr-2"
-        text="Hvert á ég að mæta?"
+        text="Hvert eigum við að mæta?"
         bgColor="bg-pink-400"
         {isLoading}
         on:click={scrollToLocation}

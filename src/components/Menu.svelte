@@ -21,12 +21,11 @@
   additionalClasses="flex-col h-screen justify-between"
 >
   <div class="flex flex-col mx-auto mt-4">
-    <img class="w-20 h-20 m-auto" alt="austurindiafjelagid" src={austurIndia} />
-    <h1
-      class="m-auto mt-6 px-8 w-full md:w-1/2 text-white text-sm text-center m-auto"
-    >
-      Við munum bjóða upp á girnilegt hlaðborð frá Austur-Indía Fjélaginu
-    </h1>
+    <div class="nes-container is-rounded !mx-6 mt-4 !p-4 bg-white">
+      <h1 class="w-full md:w-1/2 text-sm text-center m-auto">
+        Við munum bjóða upp á girnilegt hlaðborð frá Austur-Indía Fjélaginu
+      </h1>
+    </div>
   </div>
   <div class="flex flex-col">
     <div class="text-center text-white text-sm w-64 mx-auto my-4">
