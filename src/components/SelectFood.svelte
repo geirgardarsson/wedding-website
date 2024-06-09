@@ -176,6 +176,7 @@
       <Button
         text="Skrá maka"
         bgColor="bg-pink-400"
+        {isLoading}
         on:click={scrollToSpouse}
       />
     </div>

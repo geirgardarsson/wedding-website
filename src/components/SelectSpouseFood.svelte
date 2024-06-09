@@ -30,6 +30,7 @@
   let otherDietSpouse = "";
   let isLoading = false;
   let guestId = null;
+  let spouseName: string = "";
 
   function scrollToLocation() {
     const foodSection = document.getElementById("location");
@@ -42,7 +43,7 @@
   }
 
   function handleRadioSpouseChange(value: string) {
-    console.log("hallo", value)
+    console.log("hallo", value);
     let isOther =
       value !== "normal" && value !== "vegan" && value !== "vegetarian";
 
@@ -68,7 +69,7 @@
   }
 
   function handleOtherSpouseChange(value: string) {
-    console.log("hæ2", value)
+    console.log("hæ2", value);
     var { spouse } = get(spouseStore);
 
     if (spouse) {
@@ -77,7 +78,7 @@
   }
 
   async function updateFood(spouse: StoredGuest, value: string) {
-    console.log("hæ", value, spouse)
+    console.log("hæ", value, spouse);
     if (spouse.diet === value) {
       return;
     }
@@ -94,7 +95,7 @@
       }
     );
 
-    console.log(res)
+    console.log(res);
 
     if (!res.ok) {
       isLoading = false;
@@ -119,6 +120,10 @@
   onMount(() => {
     var { spouse } = get(spouseStore);
 
+    if (spouse) {
+      spouseName = spouse.firstName;
+    }
+
     if (spouse?.diet) {
       handleRadioSpouseChange(spouse.diet);
     }
@@ -129,7 +134,7 @@
   <div class="flex flex-col justify-around mx-6">
     <div class="nes-container is-rounded bg-white">
       <h2 class="text-center text-sm">
-        Láttu okkur vita ef maki er með einhverjar séróskir um mat
+        {`Láttu okkur vita ef ${spouseName ?? "maki"} er með einhverjar séróskir um mat`}
       </h2>
     </div>
     <div>
@@ -138,7 +143,7 @@
           <input
             class="hidden peer"
             type="radio"
-            id={spouseOption.value}
+            id={`${spouseOption.value}-2`}
             name="spouse-food"
             value={spouseOption.value}
             checked={selectedSpouseOption === spouseOption.value}
@@ -146,7 +151,7 @@
           />
           <label
             class="btn-secondary bg-emerald-200 peer-checked:bg-emerald-400"
-            for={spouseOption.value}>{spouseOption.text}</label
+            for={`${spouseOption.value}-2`}>{spouseOption.text}</label
           >
         </div>
       {/each}

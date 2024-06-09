@@ -9,6 +9,7 @@
   let firstName = "";
   let lastName = "";
   let isRegistered = false;
+  let isLoading = false;
 
   onMount(() => {
     var { guest } = get(guestStore);
@@ -25,6 +26,12 @@
   }
 
   async function register() {
+    if (!firstName) {
+      return;
+    }
+
+    isLoading = true;
+
     const res = await fetch("https://wedding-api-hxzp.onrender.com/api/guest", {
       method: "POST",
       headers: {
@@ -39,7 +46,7 @@
     });
 
     if (!res.ok) {
-      // isLoading = false;
+      isLoading = false;
       console.error(res);
       return;
     }
@@ -54,10 +61,12 @@
 
     spouseStore.set({
       spouse: null,
-      guestId: result.id
+      guestId: result.id,
     });
 
     setGuestData(result);
+
+    isLoading = false;
   }
 
   function scrollToFood() {
@@ -110,6 +119,7 @@
         on:click={isRegistered ? scrollToFood : register}
         text={isRegistered ? "Hlakka til að mæta!!" : "Ég ætla að mæta!!"}
         bgColor="bg-emerald-500"
+        {isLoading}
       />
     </div>
   </div>
