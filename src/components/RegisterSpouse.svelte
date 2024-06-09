@@ -136,7 +136,7 @@
         />
       </div>
     {/if}
-    <div class="m-auto mx-6 mb-12">
+    <div class="m-auto mx-4">
       <Button
         on:click={isRegistered ? scrollToFood : register}
         text={isRegistered

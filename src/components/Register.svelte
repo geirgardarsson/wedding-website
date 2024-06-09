@@ -95,7 +95,7 @@
         Takk fyrir að mæta {firstName}!!
       </h1>
     {:else}
-      <div class="m-auto flex flex-col min-h-96 m-auto justify-center">
+      <div class="m-auto flex flex-col m-auto justify-center">
         <TextInput
           bind:text={firstName}
           placeholder="Fornafn"
@@ -114,7 +114,7 @@
         />
       </div>
     {/if}
-    <div class="m-auto mx-6 mb-12">
+    <div class="m-auto">
       <Button
         on:click={isRegistered ? scrollToFood : register}
         text={isRegistered ? "Hlakka til að mæta!!" : "Ég ætla að mæta!!"}

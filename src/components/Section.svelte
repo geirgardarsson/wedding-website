@@ -31,7 +31,7 @@
 <div
   id={sectionId}
   class="screen-section {backgroundColor} {additionalClasses}"
-  style={"height: 100vh"}
+  style={"height: 100%"}
 >
   <slot />
 </div>

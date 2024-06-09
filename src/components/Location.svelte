@@ -16,7 +16,7 @@
 <Section sectionId="location" backgroundColor="bg-emerald-400">
   <div class="h-screen w-full lg:w-2/3 p-8 m-auto flex flex-col">
     <div class="h-1/2 md:h-2/3 m-auto mt-0">
-      <h1 class="text-white text-center mb-6">
+      <h1 class="text-white text-center text-base mb-6">
         Bæði veislan og athöfnin verða haldin í Rafveituheimilinu í Elliðaárdal
       </h1>
       <div class="w-full h-full m-auto">
