@@ -33,7 +33,7 @@
       body: JSON.stringify({
         firstName: firstName,
         lastName: lastName,
-        diet: "vegan",
+        diet: "normal",
         going: true,
       }),
     });

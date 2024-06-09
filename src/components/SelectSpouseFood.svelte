@@ -4,9 +4,9 @@
   import Section from "./Section.svelte";
   import TextInput from "./TextInput.svelte";
   import { get } from "svelte/store";
-  import { guestStore } from "../stores";
+  import { guestStore, spouseStore } from "../stores";
 
-  let options = [
+  let spouseOptions = [
     {
       text: "Bara venjulegt takk",
       value: "normal",
@@ -25,10 +25,11 @@
     },
   ];
 
-  let selectedOption = "";
-  let otherSelected = false;
-  let otherDiet = "";
+  let selectedSpouseOption = "";
+  let otherSelectedSpouse = false;
+  let otherDietSpouse = "";
   let isLoading = false;
+  let guestId = null;
 
   function scrollToLocation() {
     const foodSection = document.getElementById("location");
@@ -40,58 +41,51 @@
     foodSection.scrollIntoView({ behavior: "smooth" });
   }
 
-  function scrollToSpouse() {
-    const spouseSection = document.getElementById("spouse-rsvp-section");
-
-    if (!spouseSection) {
-      return;
-    }
-
-    spouseSection.scrollIntoView({ behavior: "smooth" });
-  }
-
-  function handleRadioChange(value: string) {
+  function handleRadioSpouseChange(value: string) {
+    console.log("hallo", value)
     let isOther =
       value !== "normal" && value !== "vegan" && value !== "vegetarian";
 
     if (isOther) {
-      selectedOption = "other";
-      otherSelected = true;
-      otherDiet = value === "other" ? "" : value;
+      selectedSpouseOption = "other";
+      otherSelectedSpouse = true;
+      otherDietSpouse = value === "other" ? "" : value;
       return;
     }
-    selectedOption = value;
-    otherSelected = value === "other";
+    selectedSpouseOption = value;
+    otherSelectedSpouse = value === "other";
 
     // will call the updateFood function when the user types in the text input
-    if (otherSelected) {
+    if (otherSelectedSpouse) {
       return;
     }
 
-    var { guest } = get(guestStore);
+    var { spouse } = get(spouseStore);
 
-    if (guest) {
-      updateFood(guest, value);
+    if (spouse) {
+      updateFood(spouse, value);
     }
   }
 
-  function handleOtherChange(value: string) {
-    var { guest } = get(guestStore);
+  function handleOtherSpouseChange(value: string) {
+    console.log("hæ2", value)
+    var { spouse } = get(spouseStore);
 
-    if (guest) {
-      updateFood(guest, value);
+    if (spouse) {
+      updateFood(spouse, value);
     }
   }
 
-  async function updateFood(guest: StoredGuest, value: string) {
-    if (guest.diet === value) {
+  async function updateFood(spouse: StoredGuest, value: string) {
+    console.log("hæ", value, spouse)
+    if (spouse.diet === value) {
       return;
     }
 
     isLoading = true;
 
     const res = await fetch(
-      `https://wedding-api-hxzp.onrender.com/api/guest/${guest.id}?food=${value}`,
+      `https://wedding-api-hxzp.onrender.com/api/guest/${spouse.id}?food=${value}`,
       {
         method: "PUT",
         headers: {
@@ -99,6 +93,8 @@
         },
       }
     );
+
+    console.log(res)
 
     if (!res.ok) {
       isLoading = false;
@@ -108,59 +104,62 @@
 
     const result = await res.json();
 
-    guestStore.set({
-      guest: {
+    var { guest } = get(guestStore);
+
+    spouseStore.set({
+      spouse: {
         ...result,
       },
+      guestId: guest.id,
     });
 
     isLoading = false;
   }
 
   onMount(() => {
-    var { guest } = get(guestStore);
+    var { spouse } = get(spouseStore);
 
-    if (guest?.diet) {
-      handleRadioChange(guest.diet);
+    if (spouse?.diet) {
+      handleRadioSpouseChange(spouse.diet);
     }
   });
 </script>
 
-<Section sectionId="food-section" backgroundColor="bg-sky-400">
+<Section sectionId="spouse-food-section" backgroundColor="bg-sky-400">
   <div class="flex flex-col justify-around mx-6">
     <div class="nes-container is-rounded bg-white">
       <h2 class="text-center text-sm">
-        Láttu okkur vita ef þú ert með einhverjar séróskir um mat
+        Láttu okkur vita ef maki er með einhverjar séróskir um mat
       </h2>
     </div>
     <div>
-      {#each options as option}
+      {#each spouseOptions as spouseOption}
         <div class="text-sm">
           <input
             class="hidden peer"
             type="radio"
-            id={option.value}
-            name="food"
-            value={option.value}
-            checked={selectedOption === option.value}
-            on:change={() => handleRadioChange(option.value)}
+            id={spouseOption.value}
+            name="spouse-food"
+            value={spouseOption.value}
+            checked={selectedSpouseOption === spouseOption.value}
+            on:change={(e) => handleRadioSpouseChange(spouseOption.value)}
           />
           <label
             class="btn-secondary bg-emerald-200 peer-checked:bg-emerald-400"
-            for={option.value}>{option.text}</label
+            for={spouseOption.value}>{spouseOption.text}</label
           >
         </div>
       {/each}
-      {#if otherSelected}
+      {#if otherSelectedSpouse}
         <div class="my-0">
           <TextInput
-            text={otherDiet}
+            text={otherDietSpouse}
             borderColor="border-sky-600"
             textColor="text-sky-600"
             placeholder="annað"
             placeholderColor="border-sky-100"
             additionalClasses="mx-0 w-full"
-            on:blur={(e) => handleOtherChange(e.target?.value)}
+            on:blur={(e) => handleOtherSpouseChange(e.target?.value)}
           />
         </div>
       {/if}
@@ -172,11 +171,6 @@
         bgColor="bg-pink-400"
         {isLoading}
         on:click={scrollToLocation}
-      />
-      <Button
-        text="Skrá maka"
-        bgColor="bg-pink-400"
-        on:click={scrollToSpouse}
       />
     </div>
   </div>
