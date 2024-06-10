@@ -3,6 +3,17 @@
   import PressStart from "./PressStart.svelte";
   import Pokemons from "./Pokemons.svelte";
   import Section from "./Section.svelte";
+  import { onMount } from "svelte";
+  import zeldaTheme from "$lib/zelda.mp3";
+
+  onMount(() => {
+    var audio = document.getElementById("zelda-song");
+
+    console.log(audio);
+    if (audio) {
+      audio.play();
+    }
+  });
 </script>
 
 <Section
@@ -17,11 +28,12 @@
       <p class="m-auto align-middle pt-1">Laugardaginn 6. júlí 2024</p>
     </h2>
   </div>
-  <div class="zelda-background h-[30rem] mb-0">
+  <div class="zelda-background h-[30rem] mb-0 md:w-96 mx-auto md:mb-20">
     <div class="grid grid-rows-6 grid-cols-5 h-full mx-4">
       <PressStart />
       <Countdown />
     </div>
   </div>
+  <audio id="zelda-song" src={zeldaTheme} preload="auto"></audio>
   <!-- <Pokemons /> -->
 </Section>

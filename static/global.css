@@ -627,24 +627,24 @@ video {
   grid-column-start: 3;
 }
 
-.col-start-2 {
-  grid-column-start: 2;
+.row-span-1 {
+  grid-row: span 1 / span 1;
 }
 
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
 
-.row-span-1 {
-  grid-row: span 1 / span 1;
+.row-start-2 {
+  grid-row-start: 2;
 }
 
 .row-start-4 {
   grid-row-start: 4;
 }
 
-.row-start-2 {
-  grid-row-start: 2;
+.\!m-0 {
+  margin: 0px !important;
 }
 
 .m-2 {
@@ -657,10 +657,6 @@ video {
 
 .m-auto {
   margin: auto;
-}
-
-.\!m-0 {
-  margin: 0px !important;
 }
 
 .\!mx-6 {
@@ -703,11 +699,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -732,10 +723,6 @@ video {
 
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .mb-px {
@@ -814,6 +801,10 @@ video {
   height: 100vh;
 }
 
+.\!w-\[unset\] {
+  width: unset !important;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -830,12 +821,12 @@ video {
   width: 8rem;
 }
 
-.w-48 {
-  width: 12rem;
-}
-
 .w-6 {
   width: 1.5rem;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .w-64 {
@@ -848,18 +839,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-60 {
-  width: 15rem;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
-.\!w-\[unset\] {
-  width: unset !important;
 }
 
 .scale-50 {
@@ -887,10 +866,6 @@ video {
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-rows-5 {
-  grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
 .grid-rows-6 {
@@ -1043,24 +1018,16 @@ video {
   padding: 0.5rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
-.\!p-0 {
-  padding: 0px !important;
-}
-
 .p-4 {
   padding: 1rem;
 }
 
-.pt-1 {
-  padding-top: 0.25rem;
+.p-8 {
+  padding: 2rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .text-center {
@@ -1079,9 +1046,9 @@ video {
   vertical-align: middle;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -1097,11 +1064,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-emerald-600 {
@@ -1213,19 +1175,13 @@ video {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 768px) {
+  .md\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
   .md\:h-2\/3 {
     height: 66.666667%;
   }
