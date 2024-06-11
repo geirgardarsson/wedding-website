@@ -63,7 +63,7 @@
         lastName: lastName,
         diet: "normal",
         going: true,
-        guestId: guest.id,
+        spouseId: guest.id,
       }),
     });
 
