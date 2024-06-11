@@ -93,6 +93,7 @@
   }
 
   function scrollToRegisterMyself() {
+    error = null;
     const rsvpSection = document.getElementById("rsvp-section");
 
     if (!rsvpSection) {
@@ -115,7 +116,7 @@
   <div class="h-screen w-full md:w-96 m-auto flex flex-col">
     {#if isRegistered}
       <h1 class="text-center text-xl text-white m-auto">
-        Takk fyrir að mæta {firstName}!!
+        Hlökkum til að sjá ykkur!!
       </h1>
     {:else}
       <div class="m-auto flex flex-col m-auto justify-center">
@@ -140,7 +141,7 @@
     <div class="m-auto mx-4">
       <Button
         on:click={isRegistered ? scrollToFood : register}
-        text={`${firstName !== "" ? firstName : "maki"} ætlar að mæta!!`}
+        text={`${firstName !== "" ? firstName : "maki"} hlakkar til að mæta!!`}
         bgColor="bg-pink-500"
         {isLoading}
       />
