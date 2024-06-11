@@ -127,7 +127,7 @@
 </script>
 
 <Section sectionId="food-section" backgroundColor="bg-sky-400">
-  <div class="flex flex-col justify-around mx-6 h-full">
+  <div class="flex flex-col justify-around mx-6 md:mx-auto h-full md:w-96">
     <div class="nes-container is-rounded bg-white">
       <h2 class="text-center text-sm">
         Láttu okkur vita ef þú ert með einhverjar séróskir um mat

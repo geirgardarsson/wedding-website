@@ -20,9 +20,9 @@
   backgroundColor="bg-orange-400"
   additionalClasses="flex-col h-screen justify-between"
 >
-  <div class="flex flex-col mx-auto mt-4">
+  <div class="flex flex-col mx-auto mt-4 md:w-2/3">
     <div class="nes-container is-rounded !mx-6 mt-4 !p-4 bg-white">
-      <h1 class="w-full md:w-1/2 text-sm text-center m-auto">
+      <h1 class="w-full text-sm text-center m-auto">
         Við munum bjóða upp á girnilegt hlaðborð frá Austur-Indía Fjélaginu
       </h1>
     </div>
@@ -51,7 +51,7 @@
       <MenuItem icon="fa-bowl-food" color="text-emerald-600" />
     </div>
   </div>
-  <div class="m-4">
+  <div class="m-4 mx-auto w-96">
     <Button
       on:click={scrollToDessert}
       text="Næs, er eftirréttur líka?"

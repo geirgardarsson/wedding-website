@@ -7,7 +7,11 @@
   export let isLoading = false;
 </script>
 
-<button on:click class="btn-primary {extraStyles} {bgColor}">
+<button
+  on:click
+  disabled={isLoading}
+  class="btn-primary {extraStyles} {bgColor}"
+>
   <div class="m-auto">
     {#if isLoading}
       <Loader />
