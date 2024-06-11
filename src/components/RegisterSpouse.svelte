@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { spouseStore, guestStore } from "../stores";
   import { get } from "svelte/store";
+  import Pokemons from "./Pokemons.svelte";
 
   let firstName = "";
   let lastName = "";
@@ -158,5 +159,6 @@
         </div>
       </div>
     {/if}
-  </div></Section
->
+    <Pokemons />
+  </div>
+</Section>

@@ -5,6 +5,7 @@
 </script>
 
 <Section
+  sectionId="landing"
   additionalClasses="flex-col mx-auto justify-between sky-background"
   backgroundColor="bg-blue-400"
   extraPadding={true}

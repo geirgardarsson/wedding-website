@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { guestStore, spouseStore } from "../stores";
   import { get } from "svelte/store";
+  import Pokemons from "./Pokemons.svelte";
 
   let firstName = "";
   let lastName = "";
@@ -122,5 +123,6 @@
         {isLoading}
       />
     </div>
+    <Pokemons />
   </div>
 </Section>
