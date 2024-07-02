@@ -23,7 +23,7 @@
       <h1 class={headerClass}>Í eftirrétt verður kaka frá Bauninni!</h1>
     </div>
     <div class="nes-container is-rounded bg-white !mx-6">
-      <h2 class={headerClass}>og kannski ís líka</h2>
+      <h2 class={headerClass}>og ís frá Valdís!</h2>
     </div>
     <div class="mx-auto mb-4 mt-0 h-36">
       <Button

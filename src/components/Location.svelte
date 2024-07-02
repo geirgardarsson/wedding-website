@@ -3,7 +3,7 @@
   import Section from "./Section.svelte";
 
   function scrollToMenu() {
-    const menu = document.getElementById("menu-section");
+    const menu = document.getElementById("menu");
 
     if (!menu) {
       return;
