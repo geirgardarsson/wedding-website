@@ -14,7 +14,7 @@
     <h1 class="mx-auto sm:mb-4 text-xl sm:text-2xl">Brúðkaup Geirs og Rögnu</h1>
     <h2 class="mx-auto mt-4 text-sm flex">
       <i class="fa-regular fa-calendar m-auto text-lg align-middle mr-2"></i>
-      <p class="m-auto align-middle pt-1">Laugardaginn 6. júlí 2024</p>
+      <p class="m-auto align-middle pt-1">Mæting 6. júlí kl. 16:30</p>
     </h2>
   </div>
   <div class="zelda-background h-[30rem] mb-0 md:w-96 mx-auto md:mb-20">
