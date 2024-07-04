@@ -22,7 +22,12 @@
 
   function setDetails(
     visible: boolean,
-    course?: { name: string; description: string, vegan: boolean, hasGluten: boolean }
+    course?: {
+      name: string;
+      description: string;
+      vegan: boolean;
+      hasGluten: boolean;
+    }
   ) {
     detailsVisible = visible;
 
@@ -42,7 +47,8 @@
   const courses = {
     main1: {
       name: "Lagan ka Murgh",
-      description: "Kjúklingur í kryddaðri rjómamarineringu, grillaður í tandoori ofni",
+      description:
+        "Kjúklingur í kryddaðri rjómamarineringu, grillaður í tandoori ofni",
       hasGluten: false,
       vegan: false,
     },
@@ -54,7 +60,8 @@
     },
     main3: {
       name: "Chana Masala",
-      description: "Kjúklingabaunir með tómötum, engifer, lauk, hvítlauk og öðrum kryddum",
+      description:
+        "Kjúklingabaunir með tómötum, engifer, lauk, hvítlauk og öðrum kryddum",
       hasGluten: false,
       vegan: true,
     },
@@ -92,7 +99,8 @@
       <p class="m-auto text-sm">{courseDescription}</p>
       <div class="flex w-full">
         <div class="m-auto">
-          {#if vegan}<i class="fa-solid fa-seedling text-green-600 text-xl"></i>{/if}
+          {#if vegan}<i class="fa-solid fa-seedling text-green-600 text-xl"
+            ></i>{/if}
           {#if !hasGluten}
             <div class="fa-stack small">
               <i class="fa-solid fa-wheat-awn" style="color:brown"></i>
